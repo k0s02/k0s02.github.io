@@ -50,7 +50,7 @@ function sendData(object){
         }
 		if(document.getElementById("c_entry").value == "")
   {
-		alert("Warning! ENTRY field is be empty!");
+		alert("Warning! ENTRY field is empty!");
 		
   }	
 }
