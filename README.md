@@ -1,4 +1,3 @@
 # k0s02.github.io
 
-Author: microk2
-Edits: k0s02
+Author: microk2 , k0s02
