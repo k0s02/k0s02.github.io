@@ -1,3 +1,3 @@
-# k0s02.github.io
+# NPC Generator
 
 Author: microk2 , k0s02
