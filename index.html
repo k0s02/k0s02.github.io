@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../Script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../content.css">
+		<title>Creature generator</title>
+</head>
+
+<body>
+
+<div class="topnav">
+  <a class="active" href="index.html">Creature Generator</a>
+  <a href="waypoints.html">Waypoint Converter</a>
+</div>
+ 
+    <div class="main-div">
+        <div class="main-content">
+            <div class="title">
+                CREATURE GENERATOR
+            </div>
+            <div class="content">
+              <table>
+                <tbody>
+				<center>
+                  <div class="TriggerTemplate">
+                <button id="triggerButton">Trigger Template</button>
+				</center>
+            </div>
+				  <tr>
+                    <td>Entry</td>
+                    <td>
+                      <input id="c_entry" type="number" min="0">
+					  <button id="gaps" type="button" onclick="window.open('https://www.wow-freakz.com/admin/id_gaps.php?table=creature_template','_blank');"> Search ID Gaps</button>
+					  
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Name</td>
+                    <td>
+                      <input id="c_name" type="text">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>SubName</td>
+                    <td>
+                      <input id="c_subname" type="text">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>GossipMenuID</td>
+                    <td>
+                      <input id="c_gossipmenuid" type="number" min="0" style="width: 50%;" value="0">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ModelID</td>
+                    <td>
+                      <input id="c_modelid" type="number" min="0" value="0" style="width: 50%;">
+					  <!--<input type="checkbox" id="iepure"><span style="font-size:15px;">iepure</span></input>-->
+                      
+					  
+					  
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>FactionID</td>
+                    <td>
+                      <input id="c_factionid" type="number" min="1" style="width: 50%;" value="0">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>SmartAI</td>
+                    <td>
+                        <select id="c_smartai">
+                          <option value="0">Inactive</option>
+                          <option value="1">Active</option>
+                        </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>NpcFlags</td>
+                    <td>
+                      <input type="checkbox" name="npcFlags" value="1"><span style="font-size:15px;">NPC_FLAG_GOSSIP</span></input> <br>
+                      <input type="checkbox" name="npcFlags" value="2"><span style="font-size:15px;">NPC_FLAG_QUEST_GIVER</span></input> <br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>FlagsExtra</td>
+                    <td>
+                      <input id="flagsExtra" type="checkbox" name="flagsExtra" value="128"><span style="font-size:15px;">FLAG_EXTRA_EXTRA_TRIGGER</span></input> <br>
+                      <input id="flagsExtra2" type="checkbox" name="flagsExtra2" value="1073741824"><span style="font-size:15px;">FLAG_EXTRA_EXTRA_SCENARIO_TRIGGER</span></input> <br>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="send">
+                <button id="sendButton" onclick="sendData('creature_generator')">Send</button>
+            </div>
+            <div class="SQL">
+				<textarea id="textarea" rows="10" placeholder = 'SQL result' hidden readOnly></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../content.css">
+		<title>Waypoint Converter</title>
+</head>
+
+<body>
+
+    <div class="topnav">
+  <a href="index.html">Creature Generator</a>
+  <a class="active" href="waypoints.html">Waypoint Converter</a>
+</div>
+
+    <div class="main-div">
+        <div class="main-content">
+            <div class="title">
+                WAYPOINT CONVERTER
+            </div>
+            <div class="content">
+              <table>
+
+              <br>
+              <center>
+              <label for="waypoint">Paste your `waypoint_data` SQL here:</label>
+
+<textarea id="waypoint" name="waypoint"
+          rows="10"  wrap autofocus>
+</textarea>
+</center>
+
+
+<div class="send">
+                <button id="ConvertButton" onclick="convert()">Convert</button>
+            </div>
+            <div class="waypointSQL">
+                <textarea id="waypointSQL" rows="10" placeholder = 'SQL result' hidden readOnly></textarea>
+            </div>
