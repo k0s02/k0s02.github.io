@@ -1,3 +1,3 @@
 # NPC Generator
 
-Author: microk2 , k0s02
+Authors: k0s02, microk2, Miiruxd
