@@ -29,6 +29,8 @@ function sendData(object){
                 var flagsextra2_length = flagsextra2.length;
                 var flagsextra2_value = 0;
                 var smart = "'" + "" + "'"  ;
+		var minlvl = 110;
+		var maxlvl = 110;	
 
                 name = "'" + name + "'";
                 subName = "'" + subName + "'";
@@ -51,7 +53,7 @@ function sendData(object){
                   }
                 }
 
-                var SQL = "INSERT INTO creature_template (entry, name, subname, gossip_menu_id, modelid1, faction, npcflag, flags_extra, flags_extra2, AIName) VALUES (" + entry + ", " + name + ", " + subName + ", " + gossipid + ", " + modelid + ", " + factionid + ", " + npcflags_value + ", " + flagsextra_value + ", " + flagsextra2_value + ", " + smart + ");\n";
+                var SQL = "INSERT INTO creature_template (entry, name, subname, gossip_menu_id, modelid1, minlevel, maxlevel, faction, npcflag, flags_extra, flags_extra2, AIName) VALUES (" + entry + ", " + name + ", " + subName + ", " + gossipid + ", " + modelid + ", " + minlvl + ", " + maxlvl + ", " + factionid + ", " + npcflags_value + ", " + flagsextra_value + ", " + flagsextra2_value + ", " + smart + ");\n";
                 textarea.value = SQL;
                 copyText('textarea');
               break;
