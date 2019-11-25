@@ -93,7 +93,7 @@ function convert(object)
                 var converted = waypointValue.valueOf();
 
                 while (converted.search("0, 0, 0, 0, 0, 100, 0, 0") != -1)
-                  converted = converted.replace("0, 0, 0, 0, 100, 0, 0", "''");
+                  converted = converted.replace("0, 0, 0, 0, 0, 100, 0, 0", "''");
 
                 converted = converted.replace("`id`, `point`,", "`entry`, `pointid`,").replace("`orientation`, `delay`, `move_type`, `speed`, `action`, `action_chance`, `entry`, `wpguid`", "`point_comment`").replace("`waypoint_data`", "`waypoints`");
 		    
