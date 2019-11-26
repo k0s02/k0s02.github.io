@@ -29,8 +29,8 @@ function sendData(object){
                 var flagsextra2_length = flagsextra2.length;
                 var flagsextra2_value = 0;
                 var smart = "'" + "" + "'"  ;
-		var minlvl = 110;
-		var maxlvl = 110;	
+    var minlvl = 110;
+    var maxlvl = 110; 
 
                 name = "'" + name + "'";
                 subName = "'" + subName + "'";
@@ -53,38 +53,40 @@ function sendData(object){
                   }
                 }
 
-                var SQL = "INSERT INTO creature_template (entry, name, subname, gossip_menu_id, modelid1, minlevel, maxlevel, faction, npcflag, flags_extra, flags_extra2, AIName) VALUES (" + entry + ", " + name + ", " + subName + ", " + gossipid + ", " + modelid + ", " + minlvl + ", " + maxlvl + ", " + factionid + ", " + npcflags_value + ", " + flagsextra_value + ", " + flagsextra2_value + ", " + smart + ");\n";
+                var SQL = "INSERT INTO creature_template (entry, gossip_menu_id, minlevel, maxlevel, faction, npcflag, flags_extra, flags_extra2, AIName) VALUES (" + entry + ", " + gossipid + ", " + minlvl + ", " + maxlvl + ", " + factionid + ", " + npcflags_value + ", " + flagsextra_value + ", " + flagsextra2_value + ", " + smart + ");\n
+                           INSERT INTO creature_template_wdb (Entry, Name1, Title, DisplayId1) VALUES (" + entry + ", " + name + ", " + subName + ", " + modelid + ");\n"
+
                 textarea.value = SQL;
                 copyText('textarea');
               break;
         }
-		if(document.getElementById("c_entry").value == "")
+    if(document.getElementById("c_entry").value == "")
   {
-		alert("Warning! ENTRY field cannot be EMPTY!");
-		
-  }	
+    alert("Warning! ENTRY field cannot be EMPTY!");
+    
+  } 
 }
 
 
 function fillTextTrigger()
 {
-	var triggerButton = document.getElementById("triggerButton");
-	triggerButton.onclick = function()
-	{
-		if(this.onclick)
-		{
-			c_modelid.value = "28998";
-			c_smartai.selectedIndex = true;
-			c_name.value = "Trigger ";
-			c_factionid.value = "35";
-			flagsExtra.checked = true;
-			
-		}
-		
-	}
-	
+  var triggerButton = document.getElementById("triggerButton");
+  triggerButton.onclick = function()
+  {
+    if(this.onclick)
+    {
+      c_modelid.value = "28998";
+      c_smartai.selectedIndex = true;
+      c_name.value = "Trigger ";
+      c_factionid.value = "35";
+      flagsExtra.checked = true;
+      
+    }
+    
+  }
+  
 }
-	
+  
 window.onload = fillTextTrigger;
 
 function convert(object)
@@ -96,14 +98,14 @@ function convert(object)
                   converted = converted.replace("0, 0, 0, 0, 0, 100, 0, 0", "''");
 
                 converted = converted.replace("`id`, `point`,", "`entry`, `pointid`,").replace("`orientation`, `delay`, `move_type`, `speed`, `action`, `action_chance`, `entry`, `wpguid`", "`point_comment`").replace("`waypoint_data`", "`waypoints`");
-		    
+        
                 document.getElementById('waypointSQL').value = converted;
                 var waypointSQL = document.getElementById('waypointSQL');
                 waypointSQL.hidden = false;
                 waypointSQL.select();
                 document.execCommand("copy");
             }
-	
+  
 /*function showData(object)
 {
       var target = document.getElementById(object);
