@@ -53,8 +53,7 @@ function sendData(object){
                   }
                 }
 
-                var SQL = "INSERT INTO creature_template (entry, gossip_menu_id, minlevel, maxlevel, faction, npcflag, flags_extra, flags_extra2, AIName) VALUES (" + entry + ", " + gossipid + ", " + minlvl + ", " + maxlvl + ", " + factionid + ", " + npcflags_value + ", " + flagsextra_value + ", " + flagsextra2_value + ", " + smart + ");\n
-                           INSERT INTO creature_template_wdb (Entry, Name1, Title, DisplayId1) VALUES (" + entry + ", " + name + ", " + subName + ", " + modelid + ");\n"
+                var SQL = "INSERT INTO creature_template (entry, gossip_menu_id, minlevel, maxlevel, faction, npcflag, flags_extra, flags_extra2, AIName) VALUES (" + entry + ", " + gossipid + ", " + minlvl + ", " + maxlvl + ", " + factionid + ", " + npcflags_value + ", " + flagsextra_value + ", " + flagsextra2_value + ", " + smart + ");\n INSERT INTO creature_template_wdb (Entry, Name1, Title, DisplayId1) VALUES (" + entry + ", " + name + ", " + subName + ", " + modelid + ");\n"
 
                 textarea.value = SQL;
                 copyText('textarea');
