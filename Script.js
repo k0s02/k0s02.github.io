@@ -5,7 +5,6 @@ function copyText(target) {
 }
 
 function sendData(object){
-    // DO NOT DELETE!!!!!!!!!
     var textarea = document.getElementById('textarea');
     textarea.hidden = false;
     switch(object)
