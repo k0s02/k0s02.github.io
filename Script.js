@@ -28,8 +28,8 @@ function sendData(object){
                 var flagsextra2_length = flagsextra2.length;
                 var flagsextra2_value = 0;
                 var smart = "'" + "" + "'"  ;
-    var minlvl = 110;
-    var maxlvl = 110; 
+                var minlvl = 110;
+                var maxlvl = 110; 
 
                 name = "'" + name + "'";
                 subName = "'" + subName + "'";
